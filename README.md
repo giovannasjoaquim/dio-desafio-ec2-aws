@@ -31,15 +31,13 @@ Abaixo estão os fluxos representando o uso de serviços AWS, incluindo EC2, S3,
 
 ### 🖼️ Fluxo 1 - EC2 com Volumes EBS e Integração com RDS
 ![Diagrama EC2-EBS-RDS](Desafio.drawio.png)
-
-Neste fluxo, o usuário envia um arquivo de um sistema local para o Amazon S3. A chegada desse arquivo aciona automaticamente uma função Lambda, que pode processar, validar ou mover o arquivo para outro serviço.
+Neste cenário, o ator interage com uma aplicação hospedada em uma instância EC2. A EC2 está conectada a dois volumes EBS (D e E), responsáveis pelo armazenamento de dados. Além disso, há integração com um banco de dados RDS para persistência e consulta de dados.
 
 ---
 
 ### 🖼️ Fluxo 2 - Upload para S3 e Processamento com Lambda
-![Diagrama S3-Lambda] (Desafio2.drawio.png)
-
-Neste cenário, o ator interage com uma aplicação hospedada em uma instância EC2. A EC2 está conectada a dois volumes EBS (D e E), responsáveis pelo armazenamento de dados. Além disso, há integração com um banco de dados RDS para persistência e consulta de dados.
+![Diagrama S3-Lambda](Desafio2.drawio.png)
+Neste fluxo, o usuário envia um arquivo de um sistema local para o Amazon S3. A chegada desse arquivo aciona automaticamente uma função Lambda, que pode processar, validar ou mover o arquivo para outro serviço.
 
 ---
 
