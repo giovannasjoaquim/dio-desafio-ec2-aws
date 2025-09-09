@@ -15,8 +15,29 @@ Este repositório documenta minha experiência prática no uso de instâncias EC
 - Importância dos grupos de segurança
 - Gerenciamento de volumes EBS
 
-## 📸 Imagens
-As capturas de tela estão na pasta `/images`.
+## 📊 Diagramas da Arquitetura AWS
+
+Abaixo estão os fluxos representando o uso de serviços AWS, incluindo EC2, S3, Lambda, EBS e RDS, utilizados no desafio.
+
+---
+
+### 🖼️ Fluxo 1 - Upload para S3 e Processamento com Lambda
+
+![Diagrama S3-Lambda](./images/Desafio.drawio.png)
+
+Neste fluxo, o usuário envia um arquivo de um sistema de arquivos local para o Amazon S3. A chegada desse arquivo aciona automaticamente uma função Lambda, que pode ser usada para processar, validar ou mover o arquivo para outro serviço.
+
+---
+
+### 🖼️ Fluxo 2 - EC2 com Volumes EBS e Integração com RDS
+
+![Diagrama EC2-EBS-RDS](./images/Desafio2.drawio.png)
+
+Neste cenário, o ator interage com uma aplicação hospedada em uma instância EC2. A EC2 está conectada a dois volumes EBS (D e E), responsáveis pelo armazenamento de dados. Além disso, há integração com um banco de dados RDS para persistência e consulta de dados.
+
+---
+
+
 
 
 📚 [Documentação oficial da EC2](https://docs.aws.amazon.com/pt_br/ec2/)
